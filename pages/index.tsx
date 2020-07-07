@@ -1,15 +1,26 @@
+import React, { ReactElement } from 'react'
 import Link from 'next/link'
-import Layout from '../components/Layout'
+import PostsList from '../components/PostsList'
+import { Button, HeaderBackground, Container, HeaderWrapper } from '../styles'
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+function Index(): ReactElement {
 
-export default IndexPage
+    return (
+        <>
+            <HeaderBackground>
+                <Container>
+                    <HeaderWrapper>
+                        <Link href='/posts/new'>
+                            <Button>Create new post</Button>
+                        </Link>
+                    </HeaderWrapper>
+                </Container>
+            </HeaderBackground>
+            <Container>
+                <PostsList />
+            </Container>
+        </>
+    )
+}
+
+export default Index

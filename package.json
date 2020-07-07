@@ -8,14 +8,31 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "next": "latest",
+    "next-redux-wrapper": "^6.0.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-loading": "^2.0.3",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/next": "^9.0.0",
+    "@types/next-redux-wrapper": "^3.0.0",
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "@types/react-redux": "^7.1.9",
+    "@types/redux": "^3.6.0",
+    "@types/redux-devtools-extension": "^2.13.2",
+    "@types/redux-thunk": "^2.1.0",
+    "@types/styled-components": "^5.1.1",
+    "babel-plugin-styled-components": "^1.10.7",
+    "redux-devtools-extension": "^2.13.8",
     "typescript": "3.7.3"
   },
   "license": "ISC"
