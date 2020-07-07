@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from 'react'
+import React, { ReactElement } from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Link from 'next/link'
 import axios from 'axios'

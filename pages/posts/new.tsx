@@ -14,9 +14,9 @@ const newPost = (): ReactElement => {
     const onSubmitHandler = (e: SyntheticEvent) => {
         e.preventDefault()
         dispatch(createNewPost(title, body))
-        setTimeout(() => {
-            Router.push('/')
-        }, 1000)
+        setTitle('')
+        setBody('')
+        Router.push('/')
     }
 
     return (
