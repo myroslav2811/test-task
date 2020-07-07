@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "heroku-postbuild": "next build && next start"
+    "heroku-postbuild": "yarn build"
   },
   "dependencies": {
     "axios": "^0.19.2",
