@@ -82,7 +82,7 @@ export const Form = styled.form`
 `
 
 export const PostHead = styled.h1`
-    margin: 0;
+    margin-bottom: 0;
     font-size: 30px;
 `
 

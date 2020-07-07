@@ -9,7 +9,7 @@ function Index(): ReactElement {
         <>
             <HeaderBackground>
                 <Container>
-                    <HeaderWrapper>
+                    <HeaderWrapper style={{ justifyContent: 'flex-end' }}>
                         <Link href='/posts/new'>
                             <Button>Create new post</Button>
                         </Link>

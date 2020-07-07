@@ -1,7 +1,7 @@
 import React, { ReactElement, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { rootStateType } from '../interfaces/rootState'
-import { getPost } from '../redux/actions/postsActions'
+import { getPost, clearPost } from '../redux/actions/postsActions'
 import { PostHead, PostText } from '../styles'
 
 type propsType = {
@@ -15,13 +15,16 @@ const PostPage = ({ id }: propsType): ReactElement => {
 
     useEffect(() => {
         dispatch(getPost(id))
+        return () => {
+            dispatch(clearPost())
+        }
     }, [])
 
 
-    return ( <>
-                    <PostHead>{post && post.title}</PostHead>
-                    <PostText>{post && post.body}</PostText>
-                </>
+    return (<>
+        <PostHead>{post && post.title}</PostHead>
+        <PostText>{post && post.body}</PostText>
+    </>
     )
 }
 

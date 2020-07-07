@@ -1,5 +1,5 @@
 import { postsType } from '../../interfaces/posts'
-import { GET_POSTS, GET_POST, CREATE_POST } from '../types'
+import { GET_POSTS, GET_POST, CREATE_POST, CLEAR_POST } from '../types'
 
 const initialState: postsType = {
     posts: [],
@@ -15,6 +15,8 @@ const postsReducer = (state = initialState, action: any): postsType => {
             return { ...state, post: action.payload }
         case CREATE_POST:
             return { ...state, posts: [...state.posts, action.payload] }
+        case CLEAR_POST:
+            return { ...state, post: action.payload }
         default:
             return state
     }
